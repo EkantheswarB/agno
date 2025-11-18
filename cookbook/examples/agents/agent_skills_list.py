@@ -1,3 +1,11 @@
+"""
+Skills List Agent
+This agent helps users quickly identify the essential skills needed to stay competitive for any job role. It analyzes the given position and returns a neatly formatted markdown table of commonly required skills and their categories.
+How to Use:
+Run the script and enter the job role when prompted. The agent will generate a clean, structured skills table based on the role you provide.
+"""
+
+
 from agno.agent import Agent
 from agno.models.groq import Groq
 from textwrap import dedent
@@ -16,7 +24,7 @@ resume_agent = Agent(
     markdown=True,
 )
 
-prompt = input("Hey can you tell me the position you are applying for: ")
+prompt = input("Hey! can you tell me the job role: ")
 
 try:
     response = resume_agent.run(
